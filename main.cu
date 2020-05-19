@@ -9,11 +9,6 @@ __global__ void test() {
 
 int main(int argc, char* argv[]) {
 
-    if(argc < 2) {
-        printf("Usage: ./nn-cuda <mnist path>");
-        return 1;
-    }    
-
     int bx = 2;
     int by = 2;
     int numBlocks = 1;
