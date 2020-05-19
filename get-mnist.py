@@ -4,8 +4,8 @@ The four .gz files are downloaded, extracted, and placed into a new directory ca
 '''
 
 import os, sys
-#import urllib2
-import urllib.request
+import urllib2
+#import urllib.request
 import gzip, shutil
 
 mnistPath = 'mnist'
@@ -29,9 +29,9 @@ urls = [
 print('Downloading the MNIST dataset to the path %s' % mnistPath)
 for i, url in enumerate(urls):
     # Read response
-    #response = urllib2.urlopen(url)
-    request = urllib.request.Request(url)
-    response = urllib.request.urlopen(request)
+    response = urllib2.urlopen(url)
+    #request = urllib.request.Request(url)
+    #response = urllib.request.urlopen(request)
     
     # Save file
     tarfile = mnistPath + '/' + os.path.basename(url)
